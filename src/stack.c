@@ -5,13 +5,13 @@
 ** Login   <buathi_q@epitech.net>
 ** 
 ** Started on  Mon Jan 27 13:27:54 2014 BUATHIER Quentin
-** Last update Mon Jan 27 13:37:58 2014 BUATHIER Quentin
+** Last update Mon Jan 27 17:54:48 2014 BUATHIER Quentin
 */
 
 #include <stdlib.h>
 #include "stack.h"
 
-int		push(t_stack **stack, unsigned char value)
+int		push(t_stack **stack, TYPE_STACK value)
 {
   t_stack	*new;
 
@@ -23,13 +23,13 @@ int		push(t_stack **stack, unsigned char value)
   return (0);
 }
 
-unsigned char	pop(t_stack **stack)
+TYPE_STACK	pop(t_stack **stack)
 {
   t_stack	*temp;
-  unsigned char	value;
+  TYPE_STACK	value;
 
   if (!(*stack))
-    return ('9');
+    return (0);
   temp = (*stack);
   value = temp->value;
   *stack = temp->next;
